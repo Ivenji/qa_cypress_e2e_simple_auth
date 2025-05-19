@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-const { generateUser, generateFakeUser } = require('./generateUser.cy');
+const { generateUser, generateFakeUser } = require('./generateUser.cy.js');
 
 describe('Sign In page', () => {
   beforeEach(() => {
@@ -27,7 +27,7 @@ describe('Sign In page', () => {
     cy.get('h2').should('contain.text', 'Login Page');
   });
 
-  it.only('should deny to log in with invalid creds', () => {
+  it('should deny to log in with invalid creds', () => {
     const { username, password } = generateFakeUser();
 
     cy.get(':nth-child(1) > .large-6').type(username);

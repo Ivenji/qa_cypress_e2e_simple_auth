@@ -1,5 +1,3 @@
-module.exports = { generateUser, generateFakeUser };
-
 function generateUser() {
   const username = 'tomsmith';
   const password = 'SuperSecretPassword!';
@@ -13,3 +11,5 @@ function generateFakeUser() {
 
   return { password, username };
 };
+
+module.exports = { generateUser, generateFakeUser };
